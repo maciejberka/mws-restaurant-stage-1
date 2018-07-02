@@ -161,7 +161,7 @@ nav h1 a {
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  height: auto;
   min-width: 100%;
 }
 #restaurants-list li h1 {
@@ -235,6 +235,7 @@ nav h1 a {
 }
 #restaurant-img {
 	width: 100%;
+    height: auto;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -315,6 +316,62 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+
+
+
+
+
+@media screen and (min-width: 700px){
+  
+  #restaurants-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #restaurants-list li {
+    max-width: 270px;
+    box-sizing: content-box;
+  }
+  
+  
+}
+
+@media screen and (min-width: 1003px){
+  
+  #restaurants-list li a {
+    font-size: 14pt;
+  }
+  
+  .filter-options h2 {
+    font-size: 1.8rem; 
+}
+  .filter-options select {
+    font-size: 14pt;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
