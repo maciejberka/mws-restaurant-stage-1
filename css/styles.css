@@ -317,9 +317,7 @@ nav h1 a {
   color: #666;
 }
 
-
-
-
+/*RESPONSIVE*/
 
 
 @media screen and (min-width: 700px){
@@ -333,9 +331,8 @@ nav h1 a {
     max-width: 270px;
     box-sizing: content-box;
   }
-  
-  
 }
+
 
 @media screen and (min-width: 1003px){
   
@@ -345,44 +342,37 @@ nav h1 a {
   
   .filter-options h2 {
     font-size: 1.8rem; 
-}
+  }
   .filter-options select {
     font-size: 14pt;
   }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .inside #map-container {
+    min-width: 50vw;
+    max-width: 50vw;
+    min-height: 85vh;
+    float: right;
+    box-sizing: border-box;
+  }
   
+ #restaurant-container {
+    max-width: 50vw;
+    box-sizing: border-box;
+  }
+  
+  #reviews-container {
+    max-width: 50vw;
+    box-sizing: content-box;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+ #footer {
+    position: relative;
+    bottom: 0;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
