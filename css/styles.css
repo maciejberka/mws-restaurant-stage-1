@@ -49,6 +49,10 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
+
+*:focus{
+  outline: 2px solid green;
+}
 /* ====================== Navigation ====================== */
 nav {
   min-width: 100%;
@@ -101,6 +105,19 @@ nav h1 a {
     color: #01447e;
     text-decoration: underline;
 }
+
+.skip-map {
+  position: absolute;
+  top: -100px;
+  background-color: lightgreen;
+  color: #000;
+  font-size: 18pt;
+}
+
+.skip-map:focus{
+  top: 0;
+}
+
 /* ====================== Map ====================== */
 #map {
 /*  height: 400px;*/
