@@ -1,0 +1,50 @@
+self.addEventListener('install', event => {
+  //urls to be cached
+  const urls = [
+        './',
+        './index.html',
+        './restaurant.html',
+        './restaurant.html?id=1',
+        './restaurant.html?id=2',
+        './restaurant.html?id=3',
+        './restaurant.html?id=4',
+        './restaurant.html?id=5',
+        './restaurant.html?id=6',
+        './restaurant.html?id=7',
+        './restaurant.html?id=8',
+        './restaurant.html?id=9',
+        './restaurant.html?id=10',
+        './img/1.jpg',
+        './img/2.jpg',
+        './img/3.jpg',
+        './img/4.jpg',
+        './img/5.jpg',
+        './img/6.jpg',
+        './img/7.jpg',
+        './img/8.jpg',
+        './img/9.jpg',
+        './img/10.jpg',
+        './css/styles.css',
+        './js/dbhelper.js',
+        './js/main.js',
+        './js/restaurant_info.js',
+        './data/restaurants.json'
+    ];
+  
+  event.waitUntil(
+    caches.open(actualCache).then(cache => cache.addAll(urls)).catch(error => {
+      console.log(error);
+    });
+  );
+
+});
+
+const actualCache = 'restaurantsCache-v1';
+
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => Promise.all(
+      cacheNames.filter(cacheName => cacheName !== actualCache).map(cacheName => caches.delete(cacheName))
+    ))
+  );
+});
