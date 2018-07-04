@@ -192,3 +192,23 @@ getParameterByName = (name, url) => {
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+//register sw
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('./sw.js').then(reg => {
+        console.log('servie worker registered.');
+      
+        if (reg.installing) {
+            console.log('servie worker installing...');
+        }
+      
+        if (reg.waiting) {
+            console.log('servie worker waiting...');
+        }
+      
+        if (reg.active) {
+            console.log('servie worker active.');
+        }
+      
+    });
+}
